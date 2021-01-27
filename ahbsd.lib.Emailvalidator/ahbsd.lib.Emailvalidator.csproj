@@ -4,9 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ahbsd.lib" Version="1.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="Whois" Version="3.0.1" />
+    <PackageReference Include="Walter.Net.Networking" Version="2020.12.27.6" />
   </ItemGroup>
 </Project>
