@@ -5,4 +5,7 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ahbsd.lib.Emailvalidator\ahbsd.lib.Emailvalidator.csproj" />
+  </ItemGroup>
 </Project>
