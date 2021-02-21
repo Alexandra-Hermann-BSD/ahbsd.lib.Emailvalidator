@@ -214,14 +214,18 @@ namespace ahbsd.lib.Emailvalidator
         /// <returns>The Email adress as object.</returns>
         /// <exception cref="WrongEmailException">If something is wrong.</exception>
         [Globalizable(true)]
-        [ErrorFormat("GetEmailAdress")]
+        [ErrorFormat("GetEmailAdress", "The given email Adress {0} is wrong." +
+            "\nReason: {1}\n{2}\nSyntax: <front>@[<optional>.]" +
+                        "<second level domain>.<toplevel domain>")]
         public static IEMailAdress GetEmailAdress(string emailAdress)
         {
             IEMailAdress result = null;
             WrongEmailReason reason = WrongEmailReason.OK;
             string front, end, tld, sld;
             string[] domains, restdomains, parts;
-            string errorFmt;
+            string errorFmt = "Email adress '{0}'" +
+                        " has a wrong syntax.\nSyntax: <front>@[<optional>.]" +
+                        "<second level domain>.<toplevel domain>";
             Exception exception = null;
             
 
@@ -252,10 +256,9 @@ namespace ahbsd.lib.Emailvalidator
                 }
                 else
                 {
-                    throw new Exception(string.Format("Email adress '{0}'" +
-                        " has a wrong syntax.\nSyntax: <front>@[<optional>.]" +
-                        "<second level domain>.<toplevel domain>",
+                    exception = new Exception(string.Format(errorFmt,
                         emailAdress.Trim()));
+                    throw exception;
                 }
 
                 tld = domains[domains.Length - 1];

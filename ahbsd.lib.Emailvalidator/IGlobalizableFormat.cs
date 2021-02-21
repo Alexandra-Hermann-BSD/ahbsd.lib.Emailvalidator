@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace ahbsd.lib.Emailvalidator
+namespace ahbsd.lib
 {
     /// <summary>
     /// An interface to make it possible to read at runtime all needed keys.

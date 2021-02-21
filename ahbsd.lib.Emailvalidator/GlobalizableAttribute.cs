@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace ahbsd.lib.Emailvalidator
+namespace ahbsd.lib
 {
     /// <summary>
     /// Attribute to tell that something is globalizable or not.

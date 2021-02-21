@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace ahbsd.lib.Emailvalidator
+namespace ahbsd.lib
 {
     /// <summary>
     /// Interface for the <see cref="GlobalizableAttribute"/>.

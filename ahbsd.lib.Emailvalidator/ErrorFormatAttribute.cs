@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ahbsd.lib.Emailvalidator
+namespace ahbsd.lib
 {
     /// <summary>
     /// An attribute that defines the key for an error format and a default value
@@ -34,8 +34,8 @@ namespace ahbsd.lib.Emailvalidator
         /// Constructor with a given key. And optionally a default value.
         /// </summary>
         /// <param name="key">The key.</param>
-        /// <param name="defaultValue">The [optional] default value</param>
-        public ErrorFormatAttribute(string key, string defaultValue = null)
+        /// <param name="defaultValue">The default value</param>
+        public ErrorFormatAttribute(string key, string defaultValue)
         {
             Key = key;
 
@@ -47,6 +47,15 @@ namespace ahbsd.lib.Emailvalidator
             {
                 DefaultValue = string.Empty;
             }
+        }
+        /// <summary>
+        /// Constructor with a given key. And optionally a default value.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        public ErrorFormatAttribute(string key)
+        {
+            Key = key;
+            DefaultValue = string.Empty;
         }
 
         /// <summary>
@@ -68,7 +77,7 @@ namespace ahbsd.lib.Emailvalidator
         /// <summary>
         /// Gets or sets the default value.
         /// </summary>
-        /// <value#>The default value.</value>
+        /// <value>The default value.</value>
         public string DefaultValue { get; set; }
         #endregion
     }
@@ -86,7 +95,7 @@ namespace ahbsd.lib.Emailvalidator
         /// <summary>
         /// Gets or sets the default value.
         /// </summary>
-        /// <value#>The default value.</value>
+        /// <value>The default value.</value>
         string DefaultValue { get; set; }
     }
 }

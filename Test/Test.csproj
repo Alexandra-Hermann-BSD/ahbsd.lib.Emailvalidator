@@ -8,4 +8,8 @@
   <ItemGroup>
     <ProjectReference Include="..\ahbsd.lib.Emailvalidator\ahbsd.lib.Emailvalidator.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ahbsd.lib" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
 </Project>
